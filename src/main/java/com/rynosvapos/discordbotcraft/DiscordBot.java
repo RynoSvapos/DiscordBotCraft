@@ -48,13 +48,18 @@ public class DiscordBot {
     }
 
     public static void clearMessage() {
-        MessageHistory history = new MessageHistory(txtChannel);
-        List<Message> mags;
+        try {
+            MessageHistory history = new MessageHistory(txtChannel);
+            List<Message> mags;
 
-        mags = history.retrievePast(10).completeAfter(1, TimeUnit.SECONDS);
+            mags = history.retrievePast(10).completeAfter(1, TimeUnit.SECONDS);
 
 
-        txtChannel.deleteMessages(mags).queue();
+            txtChannel.deleteMessages(mags).queue();
+        } catch(Exception e) {
+            return;
+        }
+
 
     }
 
@@ -88,11 +93,11 @@ public class DiscordBot {
         clearMessage();
         EmbedBuilder left = new EmbedBuilder();
 
-        String embedClosedTitle = plugin.getConfig().getString("embedOpenTitle");
-        String embedClosedAuthor = plugin.getConfig().getString("embedOpenAuthor");
-        String embedClosedUrl = plugin.getConfig().getString("embedOpenUrl");
-        String embedClosedIconUrl = plugin.getConfig().getString("embedOpenIconUrl");
-        String embedClosedField = plugin.getConfig().getString("embedOpenField");
+        String embedClosedTitle = plugin.getConfig().getString("embedClosedTitle");
+        String embedClosedAuthor = plugin.getConfig().getString("embedClosedAuthor");
+        String embedClosedUrl = plugin.getConfig().getString("embedClosedUrl");
+        String embedClosedIconUrl = plugin.getConfig().getString("embedClosedIconUrl");
+        String embedClosedField = plugin.getConfig().getString("embedClosedField");
         String botAd = plugin.getConfig().getString("botAd");
 
         left.setColor(0xff0059);

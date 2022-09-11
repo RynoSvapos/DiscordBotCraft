@@ -1,0 +1,6 @@
+name: DiscordBotCraft
+version: '${project.version}'
+main: com.rynosvapos.discordbotcraft.DiscordBotCraft
+api-version: 1.19
+authors: [ Rynoooo ]
+description: This plugin actually runs a discord bot.

@@ -1,0 +1,24 @@
+# Discord Bot Token
+token: {}
+# Discord Server ID
+guildID: {}
+# Channel ID
+channelID: {}
+
+# Messages configuration
+
+gameStatus: 'Bot created by Ryno <3'
+botAd: 'Bot created by Ryno <3'
+serverStarting: 'The server is starting..'
+
+embedOpenTitle: 'The server is ON!'
+embedOpenAuthor: 'SERVER ON'
+embedOpenUrl: 'https://freeiconshop.com/wp-content/uploads/edd/checkmark-flat.png'
+embedOpenIconUrl: 'https://freeiconshop.com/wp-content/uploads/edd/checkmark-flat.png'
+embedOpenField: 'server.example.com'
+
+embedClosedTitle: 'The server is actually OFF'
+embedClosedAuthor: 'SERVER OFF'
+embedClosedUrl: 'https://freeiconshop.com/wp-content/uploads/edd/cross-flat.png'
+embedClosedIconUrl: 'https://freeiconshop.com/wp-content/uploads/edd/cross-flat.png'
+embedClosedField: 'server.example.com'
